@@ -1,6 +1,8 @@
 #include <iostream>
 #include <iomanip>
 
+using HugeInt = unsigned long long int;
+
 enum class Month : unsigned char {
     Jan = 1, January = Jan,
     Feb, February = Feb,
@@ -48,4 +50,10 @@ int main() {
     std::cout << std::boolalpha;
     
     std::cout << "(month == month2): " << (month == month2) << std::endl;
+    
+    HugeInt num {9'000'000'000'000'000'000};
+    
+    std::cout << "num: " << num << std::endl;
+    std::cout << "sizeof(unsigned long long int): " << sizeof(unsigned long long int) << std::endl;
+    std::cout << "sizeof(HugeInt): " << sizeof(HugeInt) << std::endl;
 }
